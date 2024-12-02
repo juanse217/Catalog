@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(165, 182, 141);
+}
+
+.Wrapper{
+    border-radius: 15px;
+    width: 500px;
+    height: 350px;
+    background: rgb(236, 223, 204);
+    color: rgb(218, 131, 89);  
+}
+.Wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.Wrapper .InputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.InputBox input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 40px;
+    border: 2px dashed rgb(165, 182, 141);
+    font-size: 16px;
+    color: rgb(165, 182, 141);
+    padding: 20px 45px 20px 20px;
+}
+
+.InputBox input::placeholder{
+    color: rgb(218, 131, 89);
+}
+
+.InputBox  i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) ;
+}
+
+.Wrapper .Forgot{
+    margin-right: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.Forgot a{
+    color: rgb(165, 182, 141);
+    text-decoration: none;
+}
+
+.Forgot a:hover{
+    text-decoration: underline;
+}
+
+.Wrapper .btn{
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    border-radius: 30px;
+    background: rgb(218, 131, 89);
+    
+    font-size: 16px;
+    box-shadow: 0 0 10px rgb(248, 122, 83);
+    font-weight: 500;
+}
+
+.Wrapper a{
+    text-decoration: none;
+    color: rgb(165, 182, 141);;
+}
+
+.Wrapper a:hover{
+    text-decoration: underline;
+}
+
+.Wrapper .Register{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.Register a{
+    color: rgb(165, 182, 141);
+    text-decoration: none;
+}
+
+.Register a:hover{
+    text-decoration: underline;
+}

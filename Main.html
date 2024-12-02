@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+<body>
+   
+    <header>
+        <h2 class="title">
+            TechShop
+        </h2>
+        <div class="contenedor-botones">
+            <section class="Login">
+
+                <a rel="html"  href="loginForm.html" id="linkLogin">
+                        <i class='bx bx-user-circle'>
+                        </i>
+                </a>
+                
+            </section>
+
+            <div class="contenedor-icon">
+
+                <div class="contenedor-icon-carrito">
+                    <!--Página de ícono SVG: https://heroicons.com-->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-carrito">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                    <div class="contador-carrito">
+                        <span id="contador">0</span>
+                    </div>
+
+                    <div class="contenedor-carrito hidden-carrito">
+
+                        <div class="producto-row"> <!--Se usa este div para poder agregar los elementos al carrito, como cada vez que lo agregamos se añade después del último elemento, hubiera estado por debajo del total. -->
+                            <div class="carrito-producto">
+                                <div class="informacion-carrito">
+                                    <span class="contador-producto-carrito">10</span>
+                                    <p class="descripcion-producto-carrito">informacion producto</p>
+                                    <span class="precio-producto-carrito">$150</span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="x-carrito">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    
+                        <div class="total-carrito">
+                            <p>Total:</p>
+                            <span class="total-pagar">$150</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-boton-specs">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="specs-button">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </div>
+
+                    <div class="specs hidden-specs">
+                        <input type="checkbox" name="Iphone">
+                        <label for="Iphone">Iphone</label>
+                        <input type="checkbox" name="Android">
+                        <label for="Android">Android</label>
+                        <input type="checkbox" name="Relojes">
+                        <label for="Relojes">Relojes</label>
+                        <input type="checkbox" name="Audífonos">
+                        <label for="Audífonos">Audífonos</label>
+                        <input type="checkbox" name="Micrófonos">
+                        <label for="Micrófonos">Micrófonos</label>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+   
+    <section class="inputSearch">
+            <input type="text" placeholder= "Buscar" name="input1?" id="inputBusqueda">
+            <button type="button" id="botonBusqueda">Buscar</button>
+            
+    </section>
+
+    
+    <div class="contenedor-productos">
+
+        <div class="producto">
+            <figure>
+                <img src="https://plus.unsplash.com/premium_photo-1681147547346-2d73c90988d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>SmartWatch</h2>
+                <p class="precio-producto"> 150$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1620501402227-50b8889441fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Iphone 11 128GB</h2>
+                <p class="precio-producto"> 350$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1609085174857-cfea32ae0140?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Iphone 12 pro</h2>
+                <p class="precio-producto"> 510$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1542219550-76864b1bc385?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Case iphone XS MAX</h2>
+                <p class="precio-producto"> 80$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://plus.unsplash.com/premium_photo-1681147547346-2d73c90988d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>SmartWatch</h2>
+                <p class="precio-producto"> 150$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1600087626014-e652e18bbff2?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Samsung s10</h2>
+                <p class="precio-producto"> 230$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Combo iphone 7 y android</h2>
+                <p class="precio-producto"> 610$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1502201563651-826cbb30c3dd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Alcatel android 7</h2>
+                <p class="precio-producto"> 110$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://plus.unsplash.com/premium_photo-1681396658834-b56190480934?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Iphone 15</h2>
+                <p class="precio-producto"> 750$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://plus.unsplash.com/premium_photo-1681233751666-612c7bc77485?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aXBob25lfGVufDB8fDB8fHww" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Iphone 13</h2>
+                <p class="precio-producto"> 630$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Wireless overear black headphones</h2>
+                <p class="precio-producto"> 90$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1606400082777-ef05f3c5cde2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>In-ear headphones</h2>
+                <p class="precio-producto"> 60$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?q=80&w=813&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>White overear headphones with ANC</h2>
+                <p class="precio-producto"> 92$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1620501402227-50b8889441fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Iphone 11 64GB</h2>
+                <p class="precio-producto"> 320$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://plus.unsplash.com/premium_photo-1677155842676-8e13e7053844?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>High definition microphone</h2>
+                <p class="precio-producto"> 210$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1542219550-76864b1bc385?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Case iphone XS MAX</h2>
+                <p class="precio-producto"> 80$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://plus.unsplash.com/premium_photo-1681147547346-2d73c90988d8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>SmartWatch</h2>
+                <p class="precio-producto"> 150$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1620501402227-50b8889441fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Iphone 11 rojo</h2>
+                <p class="precio-producto"> 350$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1609085174857-cfea32ae0140?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Iphone 12 pro</h2>
+                <p class="precio-producto"> 510$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+        <div class="producto">
+            <figure>
+                <img src="https://images.unsplash.com/photo-1542219550-76864b1bc385?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Producto">
+            </figure>
+
+            <div class="descripcion">
+                <h2>Case iphone XS MAX</h2>
+                <p class="precio-producto"> 80$ </p>
+                <button type="button" class="anadir">Añadir al carro</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="Main.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+
+*{
+    background-color: rgb(203, 210, 164); 
+}
+
+body{
+    margin: 0 auto;
+    size: 1200px;
+    font-family: 'Courier New', monospace;
+    color: rgb(154, 126, 111);
+    
+}
+
+body .title{
+    font-size: 50px;
+}
+body .icon-carrito{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+body img{ 
+    max-width: 100%;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content:space-between;
+    padding: 30px 0 40px 0;
+}
+
+.contenedor-icon{
+    position: relative;
+}
+.contador-carrito{
+    font-size: 12px;
+    position: absolute;
+    top: 55%;
+    right: 115;
+    background: rgb(154, 126, 111);
+    color: rgb(233, 238, 217);
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contador{
+    background:rgb(154, 126, 111) ;
+}
+
+.contenedor-carrito{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 500px;
+    z-index: 1; /*nos funciona para asegurarnos que este contenedor siempre estará encima*/
+    box-shadow: 0 0 15px;
+    border-radius: 15px;
+}
+.carrito-producto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgb(84, 71, 63);
+}
+.informacion-carrito{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+.descripcion-producto-carrito{
+    transform: translateY(-100%);
+    font-size: 20px;
+}
+.contador-producto-carrito{
+    font-weight: 600;
+    font-size: 20px;
+}
+.precio-producto-carrito{
+    font-weight: 600;
+    font-size: 20px;
+}
+.x-carrito{
+    width: 25px;
+    height: 25px;
+    transform: translateY(-90%);
+}
+.x-carrito:hover{
+    color: rgb(26, 26, 25);
+    cursor: pointer;
+}
+.total-carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    border-radius: 15px;
+
+}
+
+.total-carrito p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.total-carrito span{
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.hidden-carrito{
+    display: none;
+}
+
+/* boton specs */
+.contenedor-boton-specs{
+    width: 40px;
+    height: 40px;
+    cursor: pointer
+}
+
+.specs{
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden-specs{
+    display: none;
+}
+/* Principal */
+
+body .contenedor-productos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.producto{
+    border-radius: 20px;
+}
+
+.producto:hover{
+    box-shadow: 0 10px 50px rgb(49, 81, 30, 0.25);
+}
+
+
+figure{
+    overflow: hidden;
+}
+.producto img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.producto:hover img{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.descripcion{
+    border-radius: 20px;
+    padding: 15px 30px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.precio-producto{
+    font-size: 18px;
+    font-weight: 1000;
+}
+
+.descripcion .anadir{
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: rgb(154, 126, 111);
+    color: rgb(233, 238, 217);
+    box-shadow: 0 0 10px rgb(84, 71, 63);
+    cursor: pointer;
+}
+.descripcion .anadir:active{
+    box-shadow: 0 0 3px rgb(84, 71, 63);
+}
+
+/* El nombre de nuestra página, título principal*/
+
+
+/*Contiene nuestra imagen y barra de búsqueda*/
+.inputSearch{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/*Nuestra barra de búsqueda*/
+#inputBusqueda{
+    background-color:rgb(154, 126, 111);
+    color: rgb(0, 0, 0);
+    margin-left: 100px;
+    margin-right: 10px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 10px;
+    
+}
+
+#inputBusqueda:hover{
+    background-color: rgb(254, 250, 224);
+}
+/*Botón de la barra de búsqueda*/
+#botonBusqueda{
+    background-color: rgb(203, 210, 164);
+    color: rgb(88, 86, 86);
+    width: 50px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-top: 70px;
+    padding: 0px;
+    border: 1px dashed rgb(88, 86, 86);
+    border-radius: 10px;
+    
+}
+#botonBusqueda:active{
+    background-color: rgb(242, 238, 215) ;
+}
+
+/*Botón para hacer sign in*/
+.Login{
+    background: rgb(203, 210, 164);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 100px;
+    margin-top: 10px;
+    width: 30px;
+   
+}
+
+.Login #linkLogin:active{
+    color: rgb(214, 192, 179);
+}
+
+.Login #linkLogin i{
+
+    font-size: 40px;
+    position: absolute;
+    right: 75px;
+    top: 40px;
+    transform: translateY(-100%);
+}
+
+
+
+
+
+
